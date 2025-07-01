@@ -34,7 +34,8 @@ pip install yt-dlp
 ### 3. Download Command for Video 📽️
 Use this in terminal:
 ```
-yt-dlp -f "bestvideo[height<=720]+bestaudio" --merge-output-format mp4 <YouTube-link>
+yt-dlp -f "bestvideo[height<=720]+bestaudio/best[height<=720]" <video_url>
+
 ```
 - **Note :** To change quality, just replace **720** with:
 144, 360, 480, 1080, 1440, 2160, 4320...

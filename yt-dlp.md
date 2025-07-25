@@ -50,9 +50,9 @@ yt-dlp -f bestaudio <YouTube-link>
 ### 5. Playlist ⏯️
 Use this in terminal:
 ```
-yt-dlp -f "bestvideo+bestaudio" <playlist-link>
-
+yt-dlp https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID
 ```
+- Here PLAYLIST_ID is playlist link 
 ---
 
 ### HOW IT WORKS 🤔

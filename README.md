@@ -10,6 +10,7 @@
 - Create **random memes**
 - Fetch **random quotes**
 - Fun **Mad Libs-style story generation**
+- Get **current weather information** for any city
 - Open for **contributions** and new features
 
 ---

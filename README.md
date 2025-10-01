@@ -29,6 +29,14 @@ cd py-libs
  ```
 pip install -r requirements.txt
 ```
+## Continuous Integration (CI) Workflow
+
+This project uses GitHub Actions for CI. The workflow runs on every push and pull request. It:
+
+- Uses the latest Python version
+- Installs dependencies from `requirements.txt`
+- Runs the flake8 linter to check code style
+- Runs tests using pytest
 
 
 ## Contribution Guide

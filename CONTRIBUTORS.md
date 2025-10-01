@@ -25,11 +25,11 @@ Thank you to all the amazing people who have contributed to this project! 🎉
 If you've contributed to this project, please add your details using the format below:
 
 ```markdown
-### Your Name
+### Tanishka Pal
 
-- **Location:** Your City, Country
-- **GitHub:** [@your-username](https://github.com/your-username)
-- **Contribution:** Brief description of what you added/fixed
+- **Location:** Pune
+- **GitHub:** https://github.com/tanishkapall
+- **Contribution:** Add a themed haiku generator feature that prompts users to select a theme and generates creative 5-7-5 syllable haikus accordingly.
 ```
 
 ---

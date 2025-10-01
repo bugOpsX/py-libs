@@ -1,7 +1,7 @@
 import requests
 import random
 from typing import Optional, List
-from dataclasses import dataclass
+from dataclasses import dataclass 
 
 
 @dataclass

@@ -1,0 +1,45 @@
+# DSA/utils/jokes_generator.py
+
+"""
+Jokes Generator Library
+
+This module generates random jokes — programming, puns, or general jokes.
+It currently uses a local dataset for simplicity, but can be extended
+to fetch jokes from an external API in the future.
+
+Usage:
+    from jokes_generator import get_random_joke
+    print(get_random_joke())
+"""
+
+import random
+
+# Local dataset of jokes (you can expand this list)
+JOKES = [
+    # Programming jokes
+    "Why do programmers prefer dark mode? Because light attracts bugs.",
+    "A SQL query walks into a bar, walks up to two tables and asks: 'Can I join you?'",
+    "How many programmers does it take to change a light bulb? None, that's a hardware problem.",
+    "I told my computer I needed a break, and it said 'No problem — I'll go to sleep.'",
+    "Why did the programmer quit his job? Because he didn't get arrays (a raise).",
+
+    # General puns
+    "I used to play piano by ear, but now I use my hands.",
+    "Why don't skeletons fight each other? They don't have the guts.",
+    "I told my friend 10 jokes to make him laugh. Sadly, no pun in ten did.",
+    
+    # General jokes
+    "Why don’t scientists trust atoms? Because they make up everything!",
+    "Why did the scarecrow get promoted? He was outstanding in his field.",
+    "What do you call cheese that isn't yours? Nacho cheese.",
+    "Why can't your nose be 12 inches long? Because then it would be a foot."
+]
+
+def get_random_joke():
+    """Return a random joke from the local dataset."""
+    return random.choice(JOKES)
+
+if __name__ == "__main__":
+    # Allow command-line joke generation
+    print("😂 Here's a random joke for you:\n")
+    print(get_random_joke())

@@ -12,6 +12,9 @@
 - Fun **Mad Libs-style story generation**
 - Generate **themed haikus** with user-selected themes like nature, love, and season
 - Open for **contributions** and new features
+- Translate normal English into **pirate-style** phrases
+
+
 
 ---
 

@@ -18,6 +18,14 @@ Thank you to all the amazing people who have contributed to this project! 🎉
 - **GitHub:** [@akadeepesh](https://github.com/akadeepesh)
 - **Contribution:** Random Quote Generator
 
+
+### Sujal Thakur
+
+- **Location:** Pune, India
+- **GitHub:** [@techbro815](https://github.com/techbro815)
+- **Contribution:** Pirate Talk Translator (English → pirate-style text with CLI)
+
+
 ---
 
 ## How to Add Yourself

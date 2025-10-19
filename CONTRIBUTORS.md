@@ -26,6 +26,13 @@ Thank you to all the amazing people who have contributed to this project! 🎉
 - **Contribution:** Pirate Talk Translator (English → pirate-style text with CLI)
 
 
+### Deepansha
+
+- **Location:** Patiala, India
+- **Github:** [@Deepansha-re](https://github.com/Deepansha-re)
+- **Contribution:** Simple Dice Roller
+
+
 ---
 
 ## How to Add Yourself

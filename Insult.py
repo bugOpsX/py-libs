@@ -41,6 +41,13 @@ SAFE_ROASTS = [
     "You're unique… like a one-of-a-kind sticker!"
 ]
 
+# Small improvement: simple mapping for easy management
+_ROAST_SETS = {
+    "regular": ROASTS,
+    "safe": SAFE_ROASTS,
+    "family": SAFE_ROASTS
+}
+
 def get_roast(family_friendly=False):
     """
     Return a random roast.
@@ -54,8 +61,15 @@ def get_roast(family_friendly=False):
 def cli():
     """Command-line interface for roast generator."""
     family_friendly = False
-    if len(sys.argv) == 2 and sys.argv[1].lower() in ["yes", "true", "1", "safe"]:
-        family_friendly = True
+
+    # Enhancement: handle more safe-mode keywords
+    if len(sys.argv) == 2:
+        arg = sys.argv[1].lower()
+        if arg in ["yes", "true", "1", "safe", "family"]:
+            family_friendly = True
+        elif arg not in _ROAST_SETS:
+            print("Usage: python3 DSA/utils/roast_generator.py [safe|yes|true|1|family]")
+            return
 
     roast = get_roast(family_friendly)
     print(f"🔥 Roast: {roast}")

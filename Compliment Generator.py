@@ -11,7 +11,7 @@ Usage (as library):
     print(get_compliment())
 
 Usage (CLI):
-    python3 DSA/utils/compliment_generator.py [count]
+    python3 DSA/utils/compliment_generator.py [count] [category]
 """
 
 import random
@@ -59,35 +59,45 @@ PRAISES = [
     "You have main-character energy, and the plot twist loves you 📽️",
 ]
 
+# Centralize categories for easier access
+CATEGORIES = {
+    "compliment": COMPLIMENTS,
+    "motivation": MOTIVATIONS,
+    "praise": PRAISES,
+}
+
 
 def get_compliment(category=None):
     """
     Return a random compliment, motivation, or praise.
     Optional category: "compliment", "motivation", "praise".
     """
-    if category == "compliment":
-        return random.choice(COMPLIMENTS)
-    elif category == "motivation":
-        return random.choice(MOTIVATIONS)
-    elif category == "praise":
-        return random.choice(PRAISES)
-    else:
+    if category in CATEGORIES:
+        return random.choice(CATEGORIES[category])
+    elif category is None:
         all_lines = COMPLIMENTS + MOTIVATIONS + PRAISES
         return random.choice(all_lines)
+    else:
+        return f"Unknown category '{category}'. Choose from {list(CATEGORIES.keys())}."
 
 
 def cli():
     """Command-line interface for generating compliments."""
     count = 1
-    if len(sys.argv) == 2:
+    category = None
+
+    # Allow count and category through CLI
+    if len(sys.argv) >= 2:
         try:
             count = int(sys.argv[1])
         except ValueError:
-            print("Usage: python3 DSA/utils/compliment_generator.py [count]")
-            return
+            category = sys.argv[1].lower()
+
+    if len(sys.argv) == 3:
+        category = sys.argv[2].lower()
 
     for _ in range(count):
-        print(get_compliment())
+        print(get_compliment(category))
 
 
 if __name__ == "__main__":

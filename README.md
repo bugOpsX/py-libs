@@ -25,6 +25,7 @@
 ```bash
 git clone https://github.com/bugOpsX/py-libs.git
 cd py-libs
+cd src
 ```
 
 2. Make sure you have Python installed (Python 3.8+ recommended).

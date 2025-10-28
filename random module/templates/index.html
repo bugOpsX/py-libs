@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎲 Random Number Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 Random Number Generator</h1>
+    <div class="input-group">
+      <input type="number" id="min" placeholder="Min Value">
+      <input type="number" id="max" placeholder="Max Value">
+      <button onclick="generate()">Generate</button>
+    </div>
+    <h2 id="result">Your number will appear here 👇</h2>
+  </div>
+
+  <script>
+    async function generate() {
+      const min = document.getElementById('min').value;
+      const max = document.getElementById('max').value;
+
+      if (min === '' || max === '') {
+        alert('Please enter both values!');
+        return;
+      }
+
+      const response = await fetch('/generate', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({min, max})
+      });
+
+      const data = await response.json();
+      document.getElementById('result').innerText = `🎯 Random Number: ${data.number}`;
+    }
+  </script>
+</body>
+</html>
